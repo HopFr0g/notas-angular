@@ -5,7 +5,13 @@ Notas de práctica que tomé al realizar un curso de Angular.
 
 ## Sobre Angular:
 
-{Insertar breve introducción aquí}
+Angular es un framework que permite crear aplicaciones web y móviles conocidas como SPA (*Single Page Application*). Estas aplicaciones contienen, únicamente, una página HTML pero múltiples componentes internos que le dan complejidad a la misma.
+
+Esta plataforma está desarrollada por Google. En su [página oficial](https://angular.io) se encuentra su documentación.
+
+Para el desarrollo con el framework Angular se utiliza el lenguaje de programación [TypeScript](https://www.typescriptlang.org/).
+
+Es necesario instalar [NodeJS](https://nodejs.org/es) ya que necesitaremos [npm](https://www.npmjs.com/) para instalar el Angular CLI (*Command Line Interface*) que usaremos para crear componentes de Angular. Para instalarlo, se utiliza el comando **npm install -g @angular/cli** (como **administrador** o **sudo**).
 
 
 ### Créditos:
