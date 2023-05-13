@@ -13,8 +13,9 @@
 - **src/app/app.component.css** es la hoja de estilos **CSS** de nuestro componente app-root
 - **src/app/app.component.html** es el documento **HTML** de nuestro componente app-root
 - **src/app/app.component.spec.ts** es el archivo usado para realizar **pruebas** de Angular de nuestro componente app-root
-- **src/app/app.component.ts** declara la clase de TypeScript **AppComponent** donde se define nuestro componente app-root
-- **src/app/app.module.ts** declara la clase de TypeScript **AppModule** donde se describen los módulos que se importarán para el componente app-root
+- **src/app/app.component.ts** declara la clase de TypeScript **AppComponent** donde se configura el componente principal
+- **src/app/app.module.ts** declara la clase de TypeScript **AppModule** donde se configura el módulo principal (en un **módulo** se declaran TODOS los **componentes** necesarios)
+- **src/main.ts** aquí se levanta el módulo principal AppModule.
 
 
 ## Extensiones de Visual Studio Code recomendadas:
