@@ -1,0 +1,11 @@
+<h2>Calculadora</h2>
+
+<p>Operando 1:</p>
+<input type="number" [(ngModel)]="elemento1"/>
+
+<p>Operando 2:</p>
+<input type="number" [(ngModel)]="elemento2"/>
+
+<button (click)="actualizarResultado()" class="btn btn-primary" style="display: block; margin: 16px 0;">Sumar</button>
+
+<p>Resultado: {{ resultado }}</p>

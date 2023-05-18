@@ -1,0 +1,67 @@
+<div class="alert alert-info">Interpolación:</div>
+
+<!-- A continuación se referencia un atributo de la clase AppComponent -->
+<h2 class="text-primary">¡Bienvenido, {{ nombre }}!</h2>
+
+<!-- Ahora, la expresión de interpolación será el llamado a un método de AppComponent -->
+<p class="text-primary">Tu edad es {{ getEdad() }}</p>
+
+<!-- También se pueden utilizar otras expresiones: -->
+<p class="text-info">Tu identificador es {{ nombre + getEdad() }}</p>
+
+
+
+<div class="alert alert-info" style="margin-top: 60px">Template Reference Variable:</div>
+
+<!-- Se captura un evento, en este caso, liberar cualquier tecla (keyup) -->
+<!-- La sintaxis (nombreDelEvento)="expresion" se conoce como 'binding de eventos' de Angular: -->
+<div (keyup)="0">
+    <!-- Se le asigna un NOMBRE al elemento HTML pare referenciarlo: -->
+    <input #entrada placeholder="Escribe algo"/>
+    
+    <!-- Por medio de interpolación, se accede al valor del elemento llamado entrada: -->
+    <!-- El valor se actualiza cada vez que se capture el evento "keyup" -->
+    El input dice: {{ entrada.value }}
+</div>
+
+
+
+<div class="alert alert-info" style="margin-top: 60px">Property binding:</div>
+
+<!-- Este botón tiene la propiedad disabled que toma el valor -->
+<!-- true/false a partir del método minutoIsImpar() definido en el AppComponent: -->
+<button class="btn btn-primary" [disabled]="minutoIsImpar()">Botón habilitado en horas con minuto par</button>
+
+
+
+<div class="alert alert-info" style="margin-top: 60px">Event binding:</div>
+
+<!-- En este botón, se escucha al evento de Angular "click" -->
+<!-- y, cuando ocurre dicho evento, se llama al método generarNumero() del AppComponent -->
+<button class="btn btn-success" (click)="generarNumero()">Generar número aleatorio</button>
+
+<!-- Texto que referencia a un atributo que cambia de color con cada -->
+<!-- evento "click" realizado sobre el botón de arriba -->
+<p>Número aleatorio: {{ numeroAleatorio }}</p>
+
+<!-- Ejemplo donde, a la función llamada, se le pasa la variable $event: -->
+<input (input)="actualizarTexto($event)" placeholder="escribe algo"/>
+
+<p>El input dice: {{ texto }}</p>
+
+
+
+<div class="alert alert-info" style="margin-top: 60px">Two-way binding:</div>
+
+<!-- El atributo "titulo" tomará el valor de este input cada vez que se modifique -->
+<!-- Y este input tomará el valor del atributo "título" cada vez que se modifique -->
+<input [(ngModel)]="titulo" placeholder="Escribe un título" style="width: 100%"/>
+
+<!-- Texto para comprobar cómo se actualiza el valor del atributo "título": -->
+<p>Título: {{ titulo }}</p>
+
+
+
+<div class="alert alert-info" style="margin-top: 60px">Práctica:</div>
+
+<app-calculadora></app-calculadora>
